@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+.Contorno {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.Burbujas {
+    position: relative;
+    display: flex;
+    object-fit: cover;
+}
+
+.Burbujas span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background:  #32CD32;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px  #32CD3244,
+    0 0 50px  #32CD32,
+    0 0 100px  #32CD32;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+    object-fit: cover;
+}
+
+.Burbujas span:nth-child(2n) {
+    background: #ffffff;
+    box-shadow: 0 0 0 10px #ffffff44,
+    0 0 50px #ffffff,
+    0 0 100px #ffffff;
+    object-fit: cover;
+}
+
+.Burbujas span:nth-child(3n) {
+    background: #FFA500;
+    box-shadow: 0 0 0 10px #FFA50044,
+    0 0 50px #FFA500,
+    0 0 100px #FFA500;
+    object-fit: cover;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-100vh) scale(1);
+    }
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1c1c1d;
+    opacity: 1;
+    mix-blend-mode: overlay;
+}
+
+img {
+    position: absolute;
+    object-fit: cover;
+    z-index: 40;
+}
+
+.Capa2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
